@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <?php
+    echo '<h2>Danh sách sinh viên</h2>';
+    echo '<table border="1">';
+    echo '<tr><th>ID</th><th>Name</th> <th>university</th> </tr>';
+
+    foreach ($studentList as $student) {
+        echo '<tr>';
+        echo '<td>' . $student->id . '</td>';
+        echo '<td> <a href="?stid=' . $student->id . '">' . $student->name . '</a></td>';
+        echo '<td>' . $student->university . '</td>';
+        echo '</tr>';
+    }
+
+    echo '</table>';
+    ?>
+
+    </br>
+    <p><a href="../index.php">Home page</a></p>
+</body>
+</html>

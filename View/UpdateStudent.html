@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        <label for="id">Nhập ID Sinh Viên: </label>
+        <input type="text" name="id" id="id" readonly 
+            value = " 
+            <?php 
+                echo $student->id 
+            ?>
+        ">  <br>
+
+        <label for="name">Nhập Tên Sinh Viên: </label>
+        <input type="text" name="name" id="name" required 
+            value = " 
+            <?php 
+            echo $student->name
+            ?>"
+        >  <br>
+
+        <label for="age">Nhập tuổi: </label>
+        <input type="text" name="age" id="age" required
+            value = " 
+            <?php 
+            echo $student->age
+            ?>"
+        >  <br>
+
+        <label for="university">Nhập tên trường: </label>
+        <input type="text" name="university" id="university" required
+            value = " 
+            <?php 
+            echo $student->university
+            ?>"
+        >  <br>
+
+        <input type="submit" name = "updateStudentBtn"value="OK">
+        <input type="reset" value="RESET">
+
+    </form>
+    <a href="../index.php">HOME PAGE</a>
+</body>
+</html>
